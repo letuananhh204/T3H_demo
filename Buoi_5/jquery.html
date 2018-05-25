@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        // function changeColor()
+        // {
+        //     var listA = document.getElementsByTagName('a');
+        //     for(let i = 0; i < listA.length; i++)
+        //     {
+        //         document.getElementsByTagName('a')[i].style.color = "red";
+        //     }
+        // }
+
+        function changeColor()
+        {
+            $('a').css('color', 'red');
+        }
+    </script>
+    <a href="#">The a 1</a>
+    <br/>
+    <a href="#">The a 1</a>
+    <br>
+    <a href="#">The a 1</a>
+    <br>
+    <a href="#">The a 1</a>
+    <br>
+    <a href="#">The a 1</a>
+    <br>
+
+    <button onclick="changeColor()">ChangeColor</button>
+</body>
+    
+</html>

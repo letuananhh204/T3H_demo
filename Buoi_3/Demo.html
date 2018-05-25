@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buoi3</title>
+
+    <script>
+        function myScript() {
+            var message = document.getElementById("fname").value;
+            nameInput.innerHTML = message;
+            if (message == "") {
+                alert('No data');
+            }
+            else {
+                alert(message);
+                nameInput.innerHTML = message;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <form>
+        UserName:
+        <input id="fname" type="text" placeholder="username">
+        <input type="button" onclick="myScript()" value="submit" />
+        <!-- <button onclick="myScript()">Submit</button> -->
+
+    </form>
+    <p id="nameInput"> Thong tin nhap: </p>
+
+
+</body>
+
+</html>

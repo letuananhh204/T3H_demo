@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <style>
+        td,
+        th,
+        table {
+            border: 1px solid black;
+        }
+    </style>
+
+    <table id="id01">
+        <tr>
+            <th>userId </th>
+            <th>id </th>
+            <th>title </th>
+            <th>body </th>
+        </tr>
+        <tr>
+            <td>Nam</td>
+            <td>1 </td>
+            <td>Title example</td>
+            <td>Body example</td>
+        </tr>
+    </table>
+
+    <script>
+
+        var userid_key = "userId";
+        var id_key = "id";
+        var title_key = "title";
+        var body_key = "body";
+
+        
+        var xmlhttp = new XMLHttpRequest();
+        var url = "https://jsonplaceholder.typicode.com/posts";
+    
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var myArr = JSON.parse(this.responseText);
+                showContentJson(myArr);
+            }
+        };
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+
+        function showContentJson(arr) {
+            var out = "";
+            var i;
+            for (i = 0; i < arr.length; i++) {
+
+                out += '<tr><td>' + arr[i].userId + '</td><td>' + arr[i].id +
+                    '</td><td>' + arr[i].title + '</td><td>' + arr[i].body + '</td></tr>';
+                //out += '<a href="' + arr[i].userId + '">' + 
+                //arr[i].display + '</a><br>';
+                console.log(out);
+            }
+            document.getElementById("id01").innerHTML = out;
+        }
+    </script>
+    
+
+</body>
+
+</html>
